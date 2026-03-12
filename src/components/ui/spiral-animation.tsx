@@ -295,8 +295,8 @@ export function SpiralAnimation() {
         const size = Math.max(dimensions.width, dimensions.height)
         canvas.width = size * dpr
         canvas.height = size * dpr
-        canvas.style.width = `${dimensions.width}px`
-        canvas.style.height = `${dimensions.height}px`
+        canvas.style.width = `${size}px`
+        canvas.style.height = `${size}px`
         ctx.scale(dpr, dpr)
         if (animationRef.current) {
             animationRef.current.destroy()
@@ -311,8 +311,8 @@ export function SpiralAnimation() {
     }, [dimensions])
 
     return (
-        <div className="absolute inset-0 w-full h-full">
-            <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
+        <div className="absolute inset-0 w-full h-full overflow-hidden flex items-center justify-center">
+            <canvas ref={canvasRef} className="absolute" />
         </div>
     )
 }
