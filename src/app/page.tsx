@@ -24,8 +24,8 @@ export default function Home() {
         title=""
         titleNode={
           <>
-            <span className="block font-light text-white/70 whitespace-nowrap">Scaling a startup does not always</span>
-            <span className="block font-light text-white/70 whitespace-nowrap">mean hiring{" "}<span className="font-bold text-white">new people</span></span>
+            <span className="block font-light text-white/70">Scaling a startup does not always</span>
+            <span className="block font-light text-white/70">mean hiring{" "}<span className="font-bold text-white">new people</span></span>
           </>
         }
         subtitle="The easiest way to build, use, and add AI agents to your team."

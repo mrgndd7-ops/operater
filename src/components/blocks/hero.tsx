@@ -68,7 +68,7 @@ const Hero = React.forwardRef<HTMLElement, HeroProps>(
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ ease: "easeOut", duration: 0.7 }}
-          className="relative z-10 flex flex-col items-center text-center gap-6 max-w-3xl mx-auto"
+          className="relative z-10 flex flex-col items-center text-center gap-6 max-w-3xl mx-auto -mt-[12vh] sm:mt-0"
         >
           {/* Badge */}
           {badge && (
@@ -153,7 +153,7 @@ const Hero = React.forwardRef<HTMLElement, HeroProps>(
                 {partnersTitle}
               </p>
             )}
-            <div className="w-full max-w-6xl -mt-3">
+            <div className="w-full max-w-6xl -mt-6">
               <Marquee duration={18} fade={true} fadeAmount={12}>
                 {partners.map((partner, index) => (
                   <div key={index} className="mx-16 flex items-center justify-center">
