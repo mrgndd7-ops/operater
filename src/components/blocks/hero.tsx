@@ -56,7 +56,7 @@ const Hero = React.forwardRef<HTMLElement, HeroProps>(
       <section
         ref={ref}
         className={cn(
-          "relative w-full min-h-screen flex flex-col items-center justify-center bg-black overflow-hidden px-6 pb-8 md:pb-32 pt-0 -mt-8",
+          "relative w-full min-h-screen flex flex-col items-center justify-center bg-black overflow-hidden px-6 pb-28 md:pb-32 pt-0 -mt-8",
           className,
         )}
         {...props}
@@ -146,7 +146,7 @@ const Hero = React.forwardRef<HTMLElement, HeroProps>(
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ease: "easeOut", delay: 0.5, duration: 0.7 }}
-            className="relative mt-10 w-full z-10 flex flex-col items-center gap-3 px-6 md:absolute md:bottom-6 md:mt-0"
+            className="absolute bottom-4 left-0 right-0 z-10 flex flex-col items-center gap-3 px-6"
           >
             {partnersTitle && (
               <p className="text-base font-bold text-white text-center tracking-wide" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>

@@ -10,7 +10,7 @@ import React from "react"
 
 const partners = [
   { src: "/logo-nvidia.png", alt: "NVIDIA Inception Program", scale: 1.8 },
-  { src: "/logo-google-startups-v2.png", alt: "Google for Startups", scale: 4.2, multiply: true },
+  { src: "/logo-google-startups-v2.png", alt: "Google for Startups", scale: 1.8, multiply: true },
   { src: "/logo-cloudflare.png", alt: "Cloudflare" },
   { src: "/logo-plugandplay.png", alt: "Plug and Play", invert: true },
 ]
