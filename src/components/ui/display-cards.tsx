@@ -21,7 +21,23 @@ function DisplayCard({
   date = "Just now",
   iconClassName = "text-blue-500",
   titleClassName = "text-blue-500",
-}: DisplayCardData) {
+  mobile = false,
+}: DisplayCardData & { mobile?: boolean }) {
+  if (mobile) {
+    return (
+      <div className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-5 py-4 flex flex-col gap-3">
+        <div className="flex items-center gap-2">
+          <span className={cn("relative inline-block rounded-full bg-white/10 p-1", iconClassName)}>
+            {icon}
+          </span>
+          <p className={cn("text-base font-medium", titleClassName)}>{title}</p>
+        </div>
+        <p className="text-sm text-white/50 leading-snug">{description}</p>
+        <p className="text-xs text-white/30">{date}</p>
+      </div>
+    );
+  }
+
   return (
     <div
       className={cn(
@@ -65,12 +81,22 @@ export default function DisplayCards({ cards }: DisplayCardsProps) {
     : defaultCards;
 
   return (
-    <div className="flex items-center justify-center -translate-x-16">
-      <div className="grid [grid-template-areas:'stack'] place-items-center">
+    <>
+      {/* Mobile: vertical list */}
+      <div className="flex flex-col gap-4 md:hidden">
         {displayCards.map((card, i) => (
-          <DisplayCard key={i} {...card} />
+          <DisplayCard key={i} {...card} mobile />
         ))}
       </div>
-    </div>
+
+      {/* Desktop: stacked design */}
+      <div className="hidden md:flex items-center justify-center -translate-x-16">
+        <div className="grid [grid-template-areas:'stack'] place-items-center">
+          {displayCards.map((card, i) => (
+            <DisplayCard key={i} {...card} />
+          ))}
+        </div>
+      </div>
+    </>
   );
 }

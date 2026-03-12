@@ -34,7 +34,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${poppins.variable} font-poppins bg-black text-white antialiased`}
+        className={`${poppins.variable} font-poppins bg-black text-white antialiased overflow-x-hidden`}
         style={{ "--font-garet": "'Garet'" } as React.CSSProperties}
       >
         {children}
