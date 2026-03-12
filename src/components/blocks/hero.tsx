@@ -146,7 +146,7 @@ const Hero = React.forwardRef<HTMLElement, HeroProps>(
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ease: "easeOut", delay: 0.5, duration: 0.7 }}
-            className="relative mt-20 w-full z-10 flex flex-col items-center gap-3 px-6 md:absolute md:bottom-6 md:mt-0"
+            className="relative mt-10 w-full z-10 flex flex-col items-center gap-3 px-6 md:absolute md:bottom-6 md:mt-0"
           >
             {partnersTitle && (
               <p className="text-base font-bold text-white text-center tracking-wide" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
@@ -161,7 +161,7 @@ const Hero = React.forwardRef<HTMLElement, HeroProps>(
                       src={partner.src}
                       alt={partner.alt}
                       className={cn(
-                        "w-auto object-contain opacity-80",
+                        "w-auto object-contain opacity-80 max-h-12 sm:max-h-none",
                         partner.invert && "brightness-0 invert",
                       )}
                       style={{
