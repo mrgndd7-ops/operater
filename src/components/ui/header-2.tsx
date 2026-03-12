@@ -31,7 +31,7 @@ export function Header() {
     return (
         <header
             className={cn(
-                'sticky top-0 z-50 mx-auto w-full max-w-[100rem] border-b border-transparent md:rounded-[2rem] md:border md:transition-all md:ease-out',
+                'sticky top-0 z-50 mx-auto w-full max-w-[100rem] border-b border-transparent md:rounded-[2rem] md:border md:transition-all md:ease-out max-md:bg-black',
                 {
                     'bg-black/80 supports-[backdrop-filter]:bg-black/60 border-white/10 backdrop-blur-lg md:top-4 md:max-w-7xl md:shadow':
                         scrolled && !open,

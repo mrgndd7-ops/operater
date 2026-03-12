@@ -85,7 +85,7 @@ const Hero = React.forwardRef<HTMLElement, HeroProps>(
           {/* Title */}
           <h1
             className={cn(
-              "text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tight leading-tight",
+              "text-xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tight leading-tight",
               titleClassName,
             )}
             style={{ fontFamily: "var(--font-poppins), sans-serif" }}
@@ -161,7 +161,7 @@ const Hero = React.forwardRef<HTMLElement, HeroProps>(
                       src={partner.src}
                       alt={partner.alt}
                       className={cn(
-                        "w-auto object-contain opacity-80",
+                        "w-auto object-contain opacity-80 max-h-8 sm:max-h-none",
                         partner.invert && "brightness-0 invert",
                       )}
                       style={{
