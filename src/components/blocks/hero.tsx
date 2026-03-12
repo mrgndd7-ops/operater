@@ -156,16 +156,17 @@ const Hero = React.forwardRef<HTMLElement, HeroProps>(
             <div className="w-full max-w-6xl">
               <Marquee duration={18} fade={true} fadeAmount={12}>
                 {partners.map((partner, index) => (
-                  <div key={index} className="mx-16 flex items-center justify-center">
+                  <div key={index} className="mx-16 flex items-center justify-center h-14 sm:h-auto">
                     <img
                       src={partner.src}
                       alt={partner.alt}
                       className={cn(
-                        "w-auto object-contain opacity-80 max-h-12 sm:max-h-none",
+                        "w-auto object-contain opacity-80",
                         partner.invert && "brightness-0 invert",
                       )}
                       style={{
                         height: partner.scale ? `${3 * partner.scale}rem` : "3rem",
+                        maxHeight: "100%",
                         mixBlendMode: partner.multiply ? "screen" : undefined,
                       }}
                     />
