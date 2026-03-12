@@ -2,6 +2,10 @@ import { Header } from "@/components/ui/header-2"
 import { Hero } from "@/components/blocks/hero"
 import { AboutSection } from "@/components/blocks/about"
 import { HowItWorksSection } from "@/components/blocks/how-it-works"
+import { AISolutionsSection } from "@/components/blocks/ai-solutions"
+import { IntegrationsSection } from "@/components/blocks/integrations"
+import { WaitlistHero } from "@/components/ui/waitlist-hero"
+import { Footer } from "@/components/blocks/footer"
 import React from "react"
 
 const partners = [
@@ -34,6 +38,10 @@ export default function Home() {
       />
       <AboutSection />
       <HowItWorksSection />
+      <IntegrationsSection />
+      <AISolutionsSection />
+      <WaitlistHero />
+      <Footer />
     </div>
   )
 }

@@ -29,6 +29,7 @@ export function AboutSection() {
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, margin: "-150px" })
 
+  const [meetDone, setMeetDone] = useState(false)
   const [headingDone, setHeadingDone] = useState(false)
   const [subtitleVisible, setSubtitleVisible] = useState(false)
   const [completedMessages, setCompletedMessages] = useState<typeof CONVERSATION>([])
@@ -82,16 +83,24 @@ export function AboutSection() {
 
 
   return (
-    <section className="w-full bg-black py-24 px-6">
+    <section id="about" className="w-full bg-black py-24 px-6">
       <div ref={ref} className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2
-            className="text-3xl md:text-4xl font-bold text-white"
+            className="text-3xl md:text-4xl font-bold"
             style={{ fontFamily: "var(--font-poppins), sans-serif" }}
           >
-            <SpecialText inView={true} once={true} speed={36} onComplete={() => setHeadingDone(true)}>
-              Meet Operater
-            </SpecialText>
+            <span className="text-white/70">
+              <SpecialText inView={true} once={true} speed={36} onComplete={() => setMeetDone(true)}>
+                Meet
+              </SpecialText>
+            </span>
+            {" "}
+            <span className="text-white">
+              <SpecialText inView={meetDone} once={true} speed={36} onComplete={() => setHeadingDone(true)}>
+                Operater
+              </SpecialText>
+            </span>
           </h2>
           <motion.p
             initial={{ opacity: 0, y: 6 }}

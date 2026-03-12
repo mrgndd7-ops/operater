@@ -13,6 +13,8 @@ export function Header() {
         { label: 'About', href: '#about' },
         { label: 'How it works', href: '#how-it-works' },
         { label: 'Integrations', href: '#integrations' },
+        { label: 'Capabilities', href: '#capabilities' },
+        { label: 'Pricing', href: '#pricing' },
     ];
 
     React.useEffect(() => {
@@ -29,9 +31,9 @@ export function Header() {
     return (
         <header
             className={cn(
-                'sticky top-0 z-50 mx-auto w-full max-w-5xl border-b border-transparent md:rounded-[2rem] md:border md:transition-all md:ease-out',
+                'sticky top-0 z-50 mx-auto w-full max-w-[100rem] border-b border-transparent md:rounded-[2rem] md:border md:transition-all md:ease-out',
                 {
-                    'bg-black/80 supports-[backdrop-filter]:bg-black/60 border-white/10 backdrop-blur-lg md:top-4 md:max-w-4xl md:shadow':
+                    'bg-black/80 supports-[backdrop-filter]:bg-black/60 border-white/10 backdrop-blur-lg md:top-4 md:max-w-7xl md:shadow':
                         scrolled && !open,
                     'bg-black/90': open,
                 },
@@ -58,7 +60,7 @@ export function Header() {
                     {links.map((link, i) => (
                         <a
                             key={i}
-                            className="px-4 py-2 text-sm text-[#D9D9D9]"
+                            className="px-6 py-2 text-sm text-[#D9D9D9] whitespace-nowrap"
                             href={link.href}
                         >
                             {link.label}
@@ -103,6 +105,7 @@ export function Header() {
                                 key={link.label}
                                 className="px-4 py-2 text-sm text-[#D9D9D9]"
                                 href={link.href}
+                                onClick={() => setOpen(false)}
                             >
                                 {link.label}
                             </a>

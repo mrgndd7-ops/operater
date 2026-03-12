@@ -1,63 +1,53 @@
-Operater Website — Project Context
+# Operater Website — Project Context
 
-Platform
-
+## Platform
 Operater is an AI-integrated CRM platform. The easiest way to build, use, and add AI agents to your team.
 
-Tagline
-
+## Tagline
 "Scaling doesn't mean hiring new people"
 
-Sub-tagline
+## Sub-tagline
+"Backed by top names in AI"
 
-"Backed by top names in AI" with the nvidia inception logo, google startup logo, plugandplay logo, cloudflare logo. (ı will add the logos at this point)
+## How it works (differentiator — 3 steps, minimal)
+1. Choose your LLM model
+2. Give your agent a title, identity and responsibilities
+3. Activate — your agent is now part of your team
 
-How it works (differentiator — 3 steps, minimal)
-
-- Choose your LLM model
-- Give your agent a title, identity and responsibilities
-- Activate — your agent is now part of your team (we can put the figma based designs into this part)
-
-Brand Voice
-
+## Brand Voice
 Confident, direct, minimal. Never corporate. We only talk about ourselves — no competitor comparisons. Tone: "This is how modern teams scale."
 
-Brand Colors
-
+## Brand Colors
 - Background primary: #000000
 - Background secondary: #1E1E1E
 - Text primary: #FFFFFF
 - Text secondary: #D9D9D9
 - Accent: #5B6CFF — use sparingly, only for CTAs and highlights
 
-Typography
-
+## Typography
 - Headings: Garet (heavy/bold weights)
 - Body/UI: Poppins (light to semibold)
 
-Design Direction
-
+## Design Direction
 - Premium dark SaaS
 - Heavy whitespace, nothing cluttered
 - Subtle noise/grain texture on backgrounds
 - No colorful gradients — monochrome primary palette
 - Ghost mascot is core brand element — use throughout naturally
-- Reference: getviktor.com, heylemon.ai, scrape.do, dripify.com, kilo.ai, mindra.co
+- Reference: getviktor.com, heylemon.ai
 
-Pages
-
+## Pages
 - / (Home)
 - /features
 - /contact
 
-CTA Strategy
-
+## CTA Strategy
 - Primary CTA: Join Waitlist (early access, limited spots)
 - Secondary CTA: Request Demo
 - CTA appears in: navbar, hero, after product demo section, after differentiator, final section
 - NO pricing section for now
 
-Homepage Sections (in order) — all in a single page, scroll through
+## Homepage Sections (in order)
 
 1. Navbar
    - Logo + links + "Join Waitlist" CTA button
@@ -113,13 +103,11 @@ Homepage Sections (in order) — all in a single page, scroll through
 
 13. Footer
 
-Ecosystem / Backed By
-
+## Ecosystem / Backed By
 Logos to display: NVIDIA Inception, Google for Startups, Cloudflare, Plug and Play
 Placement: Hero section below CTAs OR dedicated "ecosystem" strip
 
-Tech Stack
-
+## Tech Stack
 - Next.js 14 (App Router, TypeScript)
 - Tailwind CSS
 - Framer Motion
@@ -127,11 +115,11 @@ Tech Stack
 - Figma MCP (for product screenshots)
 - Vercel (deployment)
 
-Key Rules for Claude Code
-
+## Key Rules for Claude Code
 - Always read this file before starting any task
 - One component at a time — build, confirm, then move on
 - Every section needs scroll-triggered entrance animation
 - Mobile responsive required on all components
 - Accent color #5B6CFF only for buttons and key highlights
-- Ghost mascot should feel alive — subtle float/glow animations
+- Ghost mascot should feel alive — subtle animations where present
+- No competitor names or comparison tables anywhere on site
